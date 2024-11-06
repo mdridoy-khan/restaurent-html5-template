@@ -1,0 +1,46 @@
+::-moz-selection {
+    background-color: var(--ai-color-secondary);
+    color: white;
+}
+::selection {
+    background-color: var(--ai-color-secondary);
+    color: white;
+}
+.container, .container-fluid {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.container {
+	@include lg-up {
+		max-width: 1024px;
+	}
+	@include xl-up {
+		max-width: 1200px;
+	}
+	@include xxl-up {
+		max-width: 1320px;
+	}
+}
+/**
+ * Hide text while making it readable for screen readers
+ */
+.hide-text {
+	overflow: hidden;
+	padding: 0; /* 1 */
+	text-indent: 101%;
+	white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ */
+.figure, figure {
+	display: block;
+	margin: 0;
+}
+button {
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	padding: 0;
+}

@@ -1,0 +1,16 @@
+.pagination {
+    .page-link {
+        border: 1px solid var(--ai-color-slate);
+        box-shadow: none;
+        width: 55px;
+        height: 55px;
+        @include flex-center;
+        color: var(--ai-color-primary);
+        font-weight: 500;
+        &:hover {
+            background-color: var(--ai-color-primary);
+            color: white;
+            border-color: var(--ai-color-primary);
+        }
+    }
+}

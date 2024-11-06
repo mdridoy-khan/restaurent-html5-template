@@ -1,0 +1,84 @@
+.circle_wrapper{
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: var(--ai-color-white);
+    padding: 1.5rem;
+    justify-content: flex-start;
+    @include sm-up {
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    @include md-up {
+        justify-content: center;
+    }
+    @include lg-up {
+        gap: 1.5rem;
+        padding: 1.5rem 1.5rem 0 1.5rem;
+    }
+    @include xl-up {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 1.5rem 1.5rem 0 1.5rem;
+        gap: 2.5rem;
+    }
+    @include xxl-up {
+        padding: 4rem 3rem 0 3rem;
+    }
+    .progress_item{
+        border-radius: 5px;
+        @include flex-between;
+        flex-direction: column;
+        background: none;
+        border: 0;
+        gap: 1rem;
+        padding: 0;
+        box-shadow: none;
+
+        .circle {
+            --size: 5.5rem; 
+            position: relative;
+            border-radius: 50%;
+            cursor: default;
+            @include width-height(var(--size), var(--size));
+
+            @include xxl-up {
+                --size: 6rem;
+            }
+            .box{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                transition: all 0.2s;
+                @include flex-center;
+                font-family: var(--ai-heading-font-family);
+                font-size: 1.5rem;
+                color: var(--ai-color-secondary-800);
+                .percentage-sign {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    display: inline-block;
+                    margin-top: 6px;
+                }
+            }
+            .bar, canvas {
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+        .text {
+            font-size: 1rem;
+            color: var(--ai-color-secondary);
+            line-height: 1;
+            font-family: var(--ai-heading-font-family);
+            letter-spacing: 1px;
+        }
+    }
+}

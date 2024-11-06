@@ -1,0 +1,200 @@
+// scroll to top button
+.topbutton {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--ai-color-primary);
+    width: 40px;
+    height: 40px;
+    @include flex-center;
+    z-index: 1024;
+    color: white;
+    transition: all .15s linear;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    @include lg-up {
+        width: 50px;
+        height: 50px;
+        bottom: 40px;
+        right: 40px;
+    }
+    &:hover {
+        background-color: var(--ai-color-primary);
+        color: white;
+    }
+    &.btn-show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+// primary solid button
+.btn_solid_primary {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--ai-color-primary);
+    letter-spacing: 1.8px;
+    border: 1px solid transparent;
+    display: inline-block;
+    transition: all .3s ease;
+    position: relative;
+    span {
+        color: var(--ai-color-white);
+        display: inline-block;
+        transition: all .3s ease;
+        position: relative;
+        z-index: 2;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        transform: translate(0, 5px);
+        background: var(--ai-color-secondary);
+        // z-index: -1;
+        transition: all .3s ease;
+        color: var(--ai-color-white);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+
+    }
+    &:hover {
+        span {
+            color: var(--ai-color-white);
+        }
+        &::before {
+            transform: translate(0) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+// primary outline button
+.btn_outline_primary {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    letter-spacing: 1.8px;
+    display: inline-block;
+    border: 1px solid var(--ai-color-white);
+    transition: all .3s ease;
+    position: relative;
+    span {
+        color: var(--ai-color-white);
+        display: inline-block;
+        transition: all .3s ease;
+        position: relative;
+        z-index: 2;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        transform: translate(0, 5px);
+        background: var(--ai-color-primary);
+        transition: all .3s ease;
+        color: var(--ai-color-white);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+
+    }
+    &:hover {
+        span {
+            color: var(--ai-color-white);
+        }
+        &::before {
+            transform: translate(0) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+// secondary outline button
+.secondary_outline_btn {
+    position: relative;
+    font-size: 0.875rem;
+    @include flex-center;
+    border: 2px solid var(--ai-color-slate-200);
+    text-align: center;
+    color: var(--ai-color-slate-200);
+    z-index: 1;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    transition: all .3s ease;
+    @include sm-up {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: var(--ai-color-slate-200);
+        top: -2px;
+        left: -8px;
+        width: 8px;
+        height: 2px;
+        transition: all .3s ease;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: var(--ai-color-slate-200);
+        top: -8px;
+        left: -2px;
+        width: 2px;
+        height: 8px;
+        transition: all .3s ease;
+    }
+    &:hover {
+        color: var(--ai-color-primary);
+        border-color: var(--ai-color-primary);
+        &::before {
+            background-color: var(--ai-color-primary);
+        }
+        &::after {
+            background-color: var(--ai-color-primary);
+        }
+    }
+}
+
+
+// classic button 
+.classic_btn {
+    color: var(--ai-color-secondary);
+    position: relative;
+    display: inline-block;
+    transition: all .3s ease;
+    font-size: 0.875rem;
+    @include xl-up {
+        font-size: 1rem;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: var(--ai-color-primary);
+        top: 50%;
+        transition: all 0.3s ease;
+        transform: translateY(-50%) rotate(-15deg) scale(0);
+    }
+    &:hover {
+        &::before {
+            transform: translateY(-50%) rotate(-15deg) scale(1);
+        }
+    }
+}
+
+
+  
