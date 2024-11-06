@@ -3,7 +3,7 @@
     position: fixed;
     bottom: 25px;
     right: 25px;
-    background-color: var(--ai-color-primary);
+    background-color: var(--mr-color-primary);
     width: 40px;
     height: 40px;
     @include flex-center;
@@ -20,7 +20,7 @@
         right: 40px;
     }
     &:hover {
-        background-color: var(--ai-color-primary);
+        background-color: var(--mr-color-primary);
         color: white;
     }
     &.btn-show {
@@ -34,14 +34,14 @@
 .btn_solid_primary {
     font-size: 0.875rem;
     padding: 0.75rem 1.5rem;
-    background: var(--ai-color-primary);
+    background: var(--mr-color-primary);
     letter-spacing: 1.8px;
     border: 1px solid transparent;
     display: inline-block;
     transition: all .3s ease;
     position: relative;
     span {
-        color: var(--ai-color-white);
+        color: var(--mr-color-white);
         display: inline-block;
         transition: all .3s ease;
         position: relative;
@@ -53,10 +53,10 @@
         width: 100%;
         height: 100%;
         transform: translate(0, 5px);
-        background: var(--ai-color-secondary);
+        background: var(--mr-color-secondary);
         // z-index: -1;
         transition: all .3s ease;
-        color: var(--ai-color-white);
+        color: var(--mr-color-white);
         bottom: 0;
         left: 0;
         right: 0;
@@ -66,7 +66,7 @@
     }
     &:hover {
         span {
-            color: var(--ai-color-white);
+            color: var(--mr-color-white);
         }
         &::before {
             transform: translate(0) scale(1);
@@ -82,11 +82,11 @@
     background: transparent;
     letter-spacing: 1.8px;
     display: inline-block;
-    border: 1px solid var(--ai-color-white);
+    border: 1px solid var(--mr-color-white);
     transition: all .3s ease;
     position: relative;
     span {
-        color: var(--ai-color-white);
+        color: var(--mr-color-white);
         display: inline-block;
         transition: all .3s ease;
         position: relative;
@@ -98,9 +98,9 @@
         width: 100%;
         height: 100%;
         transform: translate(0, 5px);
-        background: var(--ai-color-primary);
+        background: var(--mr-color-primary);
         transition: all .3s ease;
-        color: var(--ai-color-white);
+        color: var(--mr-color-white);
         bottom: 0;
         left: 0;
         right: 0;
@@ -110,7 +110,7 @@
     }
     &:hover {
         span {
-            color: var(--ai-color-white);
+            color: var(--mr-color-white);
         }
         &::before {
             transform: translate(0) scale(1);
@@ -125,9 +125,9 @@
     position: relative;
     font-size: 0.875rem;
     @include flex-center;
-    border: 2px solid var(--ai-color-slate-200);
+    border: 2px solid var(--mr-color-slate-200);
     text-align: center;
-    color: var(--ai-color-slate-200);
+    color: var(--mr-color-slate-200);
     z-index: 1;
     padding: 0.5rem 1rem;
     display: inline-block;
@@ -139,7 +139,7 @@
     &::before {
         content: '';
         position: absolute;
-        background-color: var(--ai-color-slate-200);
+        background-color: var(--mr-color-slate-200);
         top: -2px;
         left: -8px;
         width: 8px;
@@ -149,7 +149,7 @@
     &::after {
         content: '';
         position: absolute;
-        background-color: var(--ai-color-slate-200);
+        background-color: var(--mr-color-slate-200);
         top: -8px;
         left: -2px;
         width: 2px;
@@ -157,13 +157,13 @@
         transition: all .3s ease;
     }
     &:hover {
-        color: var(--ai-color-primary);
-        border-color: var(--ai-color-primary);
+        color: var(--mr-color-primary);
+        border-color: var(--mr-color-primary);
         &::before {
-            background-color: var(--ai-color-primary);
+            background-color: var(--mr-color-primary);
         }
         &::after {
-            background-color: var(--ai-color-primary);
+            background-color: var(--mr-color-primary);
         }
     }
 }
@@ -171,7 +171,7 @@
 
 // classic button 
 .classic_btn {
-    color: var(--ai-color-secondary);
+    color: var(--mr-color-secondary);
     position: relative;
     display: inline-block;
     transition: all .3s ease;
@@ -184,7 +184,7 @@
         content: "";
         width: 100%;
         height: 2px;
-        background: var(--ai-color-primary);
+        background: var(--mr-color-primary);
         top: 50%;
         transition: all 0.3s ease;
         transform: translateY(-50%) rotate(-15deg) scale(0);

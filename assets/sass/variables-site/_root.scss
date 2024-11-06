@@ -1,56 +1,32 @@
 :root{
     /* Global typography */
-    --ai-global-font-family       : "Didact Gothic", sans-serif;
-    --ai-global-font-size         : 1.125rem;
-    --ai-global-font-weight       : 400;
-    --ai-global-font-style        : normal;
-    --ai-global-line-height       : 1.7;
-    --ai-global-text-transform    : none;
-    --ai-global-letter-spacing    : 0;
-    --ai-global-word-spacing      : 0;
+    --mr-global-font-family       : "Roboto", serif;
+    --mr-global-font-size         : 1rem;
+    --mr-global-font-weight       : 400;
+    --mr-global-font-style        : normal;
+    --mr-global-line-height       : 1.7;
+    --mr-global-text-transform    : none;
+    --mr-global-letter-spacing    : 0;
+    --mr-global-word-spacing      : 0;
   
     /** Heading Typography **/
-    --ai-heading-font-family      : "Oswald", sans-serif;
-    --ai-heading-font-weight      : 400;
-    --ai-heading-font-style       : normal;
-    --ai-heading-line-height      : 1.4 ;
-    --ai-heading-text-transform   : none;
-    --ai-heading-letter-spacing   : 0;
-    --ai-heading-word-spacing     : 0;
-    --ai-rtl-font                 : 'Cairo', sans-serif;
-    --ai-scripts-font             : "Teko", sans-serif; 
-    --ai-fontAwesome              : "Font Awesome 5 Pro";
+    --mr-heading-font-family      : "Bebas Neue", sans-serif;
+    --mr-heading-font-weight      : 400;
+    --mr-heading-font-style       : normal;
+    --mr-heading-line-height      : 1.4 ;
+    --mr-heading-text-transform   : none;
+    --mr-heading-letter-spacing   : 0;
+    --mr-heading-word-spacing     : 0;
+    --mr-rtl-font                 : 'Cairo', sans-serif;
+    --mr-scripts-font             : "Teko", sans-serif; 
+    --mr-fontAwesome              : "Font Awesome 5 Pro";
+
+    /** Other Font **/
+    --mr-inter-font: "Inter", serif;
+    --mr-raleway-font: "Raleway", serif;
   
     /** Colors **/
-    --ai-color-primary        : #B19777;
-    --ai-color-primary-300    : #F5F1ED;
-    --ai-color-primary-400    : #EFE9E2;
-    --ai-color-primary-500    : #F3EFEB;
-    --ai-color-primary-600    : #E7DFD5;
-    --ai-color-secondary      : #25292F;
-    --ai-color-secondary-200  : #41454A;
-    --ai-color-secondary-300  : #4A4D52;
-    --ai-color-secondary-400  : #2C2F35;
-    --ai-color-secondary-500  : #363A3F;
-    --ai-color-secondary-800  : #292929;
-    --ai-color-gray           : #777777; 
-    --ai-color-gray-500       : #BFC0C2; 
-    --ai-color-gray-400       : #DADBDC; 
-    --ai-color-text           : #555555;
-    --ai-color-slate          : #D8D8DA;
-    --ai-color-slate-100      : #DEDEDE;
-    --ai-color-slate-200      : #D3D4D5;
-    --ai-color-slate-300      : #F8F9F9;
-    --ai-color-slate-400      : #E9EAEA;
-    --ai-color-slate-500      : #E5E5E5;
-    --ai-color-yellow         : #FFC107;
-    --ai-color-white          : #ffffff;
-    --ai-color-white-200      : #FAFAFA;
-    --ai-color-white-300      : #BBBDBF;
-    --ai-color-black          : #000000;
-    --ai-color-black-300      : #595C61;
-    --ai-color-broder         : #C0C1C3;
-    --ai-color-broder-200     : #C4C4C4;
+    --mr-color-primary        : #B52B1D;
 }
 
   

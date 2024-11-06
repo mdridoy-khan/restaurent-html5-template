@@ -2,7 +2,7 @@
     @include flex-center;
     flex-wrap: wrap;
     gap: 2rem;
-    background-color: var(--ai-color-white);
+    background-color: var(--mr-color-white);
     padding: 1.5rem;
     justify-content: flex-start;
     @include sm-up {
@@ -58,9 +58,9 @@
                 transform: translate(-50%, -50%);
                 transition: all 0.2s;
                 @include flex-center;
-                font-family: var(--ai-heading-font-family);
+                font-family: var(--mr-heading-font-family);
                 font-size: 1.5rem;
-                color: var(--ai-color-secondary-800);
+                color: var(--mr-color-secondary-800);
                 .percentage-sign {
                     font-size: 1rem;
                     font-weight: 400;
@@ -75,9 +75,9 @@
         }
         .text {
             font-size: 1rem;
-            color: var(--ai-color-secondary);
+            color: var(--mr-color-secondary);
             line-height: 1;
-            font-family: var(--ai-heading-font-family);
+            font-family: var(--mr-heading-font-family);
             letter-spacing: 1px;
         }
     }

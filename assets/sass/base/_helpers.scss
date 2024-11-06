@@ -1,9 +1,9 @@
 ::-moz-selection {
-    background-color: var(--ai-color-secondary);
+    background-color: var(--mr-color-secondary);
     color: white;
 }
 ::selection {
-    background-color: var(--ai-color-secondary);
+    background-color: var(--mr-color-secondary);
     color: white;
 }
 .container, .container-fluid {
@@ -18,7 +18,7 @@
 		max-width: 1200px;
 	}
 	@include xxl-up {
-		max-width: 1320px;
+		max-width: 1390px;
 	}
 }
 /**

@@ -20,22 +20,22 @@
         input {
             height: 60px;
             border: 0;
-            border-bottom: 2px solid var(--ai-color-primary);
+            border-bottom: 2px solid var(--mr-color-primary);
             border-radius: 0;
             outline: none;
             background-color: transparent;
             padding: 0 15px;
-            font-family: var(--ai-heading-font-family);
+            font-family: var(--mr-heading-font-family);
             font-size: 20px;
 
             &:focus {
-                border-color: var(--ai-color-primary);
+                border-color: var(--mr-color-primary);
             }
         }
     }
 
     .closeSearchBox {
-        background-color: var(--ai-color-primary);
+        background-color: var(--mr-color-primary);
         color: white;
         position: absolute;
         left: 50%;
@@ -51,7 +51,7 @@
             transition: all .15s ease;
         }
         &:hover {
-            background-color: var(--ai-color-primary);
+            background-color: var(--mr-color-primary);
 
             i {
                 transform: rotate(180deg);
