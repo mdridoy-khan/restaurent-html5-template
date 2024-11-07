@@ -17,6 +17,18 @@
     }
 }
 
+
+// pulse animation
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0px 0px rgba(254, 191, 0, 1);
+    }
+    100% {
+        box-shadow: 0 0 0px 20px rgb(254 191 0 / 36%);
+    }
+}
+
+
 // cta area line animation
 @keyframes topToBottom {
     0% {

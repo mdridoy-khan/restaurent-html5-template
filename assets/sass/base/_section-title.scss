@@ -1,0 +1,32 @@
+// section title style here
+.section_title {
+    margin-bottom: 60px;
+
+    .sub_title {
+        font-size: 20px;
+        line-height: 1.6;
+        font-weight: 700;
+        color: var(--mr-color-red);
+        padding-left: 20px;
+        position: relative;
+        display: block;
+        margin-bottom: 16px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: var(--mr-color-red);
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
+    }
+
+    .title {
+        font-size: 62px;
+        font-weight: 700;
+        line-height: 1;
+    }
+}

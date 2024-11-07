@@ -8,9 +8,42 @@ header {
 
     // primary header style here
     &.primary_header {
-
+        padding: 1.325rem 0;
         .header_left {
             gap: 60px;
+        }
+
+        .navbar-nav {
+            .nav-item {
+                & + .nav-item {
+                    margin-left: 40px;
+                }
+            }
+            .nav-link {
+                font-size: 15px;
+                color: var(--mr-color-white);
+                font-family: var(--mr-raleway-font);
+                font-weight: 500;
+                position: relative;
+                padding: 0;
+                &::before {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 1px;
+                    width: 0;
+                    background: gold;
+                    content: "";
+                    transition: 0.3s;
+                }
+                &:hover {
+                    &::before {
+                        width: 100%;
+                        left: auto;
+                        right: 0
+                    }
+                }
+            }
         }
 
 

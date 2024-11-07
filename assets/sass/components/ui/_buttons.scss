@@ -31,50 +31,41 @@
 }
 
 // primary solid button
-.btn_solid_primary {
-    font-size: 0.875rem;
-    padding: 0.75rem 1.5rem;
-    background: var(--mr-color-primary);
-    letter-spacing: 1.8px;
-    border: 1px solid transparent;
-    display: inline-block;
-    transition: all .3s ease;
+/* From Uiverse.io by gharsh11032000 */
+.primary_solid_btn {
     position: relative;
-    span {
-        color: var(--mr-color-white);
-        display: inline-block;
-        transition: all .3s ease;
-        position: relative;
-        z-index: 2;
-    }
+    overflow: hidden;
+    transition: color 0.5s;
+    z-index: 1;
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--mr-color-secondary);
+    font-family: var(--mr-global-font-family);
+    background: var(--mr-color-primary);
+    padding: 8px 24px;
+    border-radius: 0;
+    display: inline-block;
     &::before {
+        content: "";
         position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        transform: translate(0, 5px);
+        z-index: -1;
         background: var(--mr-color-secondary);
-        // z-index: -1;
-        transition: all .3s ease;
-        color: var(--mr-color-white);
-        bottom: 0;
-        left: 0;
-        right: 0;
-        opacity: 0;
-        visibility: hidden;
-
+        height: 150px;
+        width: 200px;
+        border-radius: 50%;
+        top: 100%;
+        left: 100%;
+        transition: all 0.7s;
     }
     &:hover {
-        span {
-            color: var(--mr-color-white);
-        }
+        color: var(--mr-color-white);
         &::before {
-            transform: translate(0) scale(1);
-            opacity: 1;
-            visibility: visible;
+            top: -30px;
+            left: -20px;
         }
     }
 }
+
 // primary outline button
 .btn_outline_primary {
     font-size: 0.875rem;

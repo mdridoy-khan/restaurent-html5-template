@@ -1,14 +1,164 @@
 // hero area style here
 .hero_area {
-    height: 40rem;
-    position: relative;
-    &::before {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        inset: 0;
-        background: linear-gradient(0deg, rgba(189, 31, 23, 0.700717787114846) 100%, rgba(255, 255, 255, 1) 100%);
-        opacity: 0.7;
+    background-color: var(--mr-color-red);
+    // .hero_content {
+    //     padding: 240px 0 160px 0;
+    //     position: relative;
+    //     .title {
+    //         color: var(--mr-color-white);
+    //         font-size: 100px;
+    //         font-weight: 700;
+    //         line-height: 1.1;
+    //         margin-bottom: 16px;
+    //         max-width: 830px;
+    //     }
+    //     .text {
+    //         color: var(--mr-color-white);
+    //         font-size: 24px;
+    //         line-height: 1.3;
+    //         max-width: 560px;
+    //         margin-bottom: 38px;
+    //     }
+    // }
+
+        .content {
+            max-width: 400px;
+            color: white;
+        }
+    
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    
+        .description {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+    
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FFD700;
+            color: #B00000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    
+        .image-container {
+            position: relative;
+            margin-left: 20px;
+        }
+    
+        .food-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+    
+        .today-offer {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: yellow;
+            padding: 5px 10px;
+            font-weight: bold;
+            color: #B00000;
+            border-radius: 50%;
+        }
+}
+
+// testimonial area style here
+.testimonail_area {
+    padding: 120px 0;
+    .single_testimonial {
+        background: var(--mr-color-primary);
+        padding: 70px 85px 70px 110px;
+        position: relative;
+        .text {
+            font-size: 20px;
+            position: relative;
+            .icon {
+                position: absolute;
+                top: -20px;
+                left: -30px;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                @include flex-center;
+            }
+        }
+        .client_info {
+            margin-top: 165px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--mr-color-secondary);
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 40px;
+                height: 4px;
+                background: var(--mr-color-red);
+                bottom: 0;
+                right: 0;
+            }
+            .client_name {
+                color: var(--mr-color-secondary);
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 1.1;
+                font-family: var(--mr-heading-font-family);
+            }
+            .location {
+                font-size: 14px;
+                line-height: 1;
+                color: var(--mr-color-black-300);
+                display: inline-block;
+            }
+        }
+        .shape {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+        }
+    }
+
+    // testimonial video 
+    .testimonail_video {
+        position: relative;
+        .video_icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            width: 50px;
+            height: 50px;
+            @include flex-center;
+            background: var(--mr-color-primary);
+            border-radius: 50px;
+            color: var(--mr-color-secondary);
+            transition: all .5s ease;
+            font-size: 18px;
+            line-height: 1;
+            animation: pulse 2s linear infinite;
+        }
+    }
+    .testimonial_thumb {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            inset: 0;
+            background: var(--mr-color-black);
+            opacity: 0.3;
+        }
+        img {
+            height: 100%;
+        }
     }
 }

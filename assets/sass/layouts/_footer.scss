@@ -1,3 +1,88 @@
 /*--------------------------------------------------------------
 # Footer-block
 --------------------------------------------------------------*/
+.footer_area {
+    padding: 120px 0;
+    position: relative;
+    background: cover / center no-repeat;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        background-color: var(--mr-color-black);
+        opacity: 0.8;
+    }
+    .footer_wrapper {
+        position: relative;
+        z-index: 5;
+        margin-bottom: 120px;
+    }
+    .footer_title{
+        font-size: 62px;
+        font-weight: 700;
+        color: var(--mr-color-white);
+        line-height: 1.1;
+        margin-bottom: 50px;
+    }
+    // footer widget
+    .single_widget {
+        img {
+            margin-bottom: 20px;
+        }
+        .title {
+            font-size: 24px;
+            color: var(--mr-color-white);
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1.4px;
+        }
+        .info_item {
+            display: block;
+            color: var(--mr-color-white);
+            line-height: 1.5;
+            max-width: 235px;
+        }
+    }
+
+    // copyright style
+    .copyright_area {
+        position: relative;
+        z-index: 5;
+        .social_icons {
+            gap: 24px;
+            margin-bottom: 25px;
+            a {
+                border: 1px solid var(--mr-color-white);
+                padding: 14px;
+                border-radius: 100px;
+                display: inline-block;
+                line-height: 1;
+                font-size: 20px;
+                transition: all .3s ease;
+                &.primary_solid_btn {
+                    background: transparent;
+                    color: var(--mr-color-white);
+                    &::before {
+                        background: var(--mr-color-primary);
+                    }
+                    &:hover {
+                        border-color: var(--mr-color-primary);
+                    }
+                }
+            }
+        }
+        .copyright_content {
+            font-family: var(--mr-montserrat-font);
+            font-size: 21px;
+            letter-spacing: 0.6px;
+            .copyright_by {
+                font-family: var(--mr-montserrat-font);
+                font-size: 21px;
+                letter-spacing: 0.6px;
+                color: var(--mr-color-primary);
+            }
+        }
+    }
+}

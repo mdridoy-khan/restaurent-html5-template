@@ -872,14 +872,6 @@ textarea.form-control:focus {
     box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.15), 0 0 0 30px rgba(255, 255, 255, 0.15), 0 0 0 45px rgba(255, 255, 255, 0);
   }
 }
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0px 0px rgb(254, 191, 0);
-  }
-  100% {
-    box-shadow: 0 0 0px 20px rgba(254, 191, 0, 0.36);
-  }
-}
 @keyframes topToBottom {
   0% {
     top: 0%;
@@ -1255,17 +1247,6 @@ header.primary_header.sticky .header-wrapper {
 .testimonail_area .single_testimonial .client_info {
   margin-top: 165px;
   padding-bottom: 10px;
-  border-bottom: 1px solid var(--mr-color-secondary);
-  position: relative;
-}
-.testimonail_area .single_testimonial .client_info::before {
-  position: absolute;
-  content: "";
-  width: 40px;
-  height: 4px;
-  background: var(--mr-color-red);
-  bottom: 0;
-  right: 0;
 }
 .testimonail_area .single_testimonial .client_info .client_name {
   color: var(--mr-color-secondary);
@@ -1284,43 +1265,6 @@ header.primary_header.sticky .header-wrapper {
   position: absolute;
   bottom: 40px;
   left: 0;
-}
-.testimonail_area .testimonail_video {
-  position: relative;
-}
-.testimonail_area .testimonail_video .video_icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--mr-color-primary);
-  border-radius: 50px;
-  color: var(--mr-color-secondary);
-  transition: all 0.5s ease;
-  font-size: 18px;
-  line-height: 1;
-  animation: pulse 2s linear infinite;
-}
-.testimonail_area .testimonial_thumb {
-  position: relative;
-}
-.testimonail_area .testimonial_thumb::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  background: var(--mr-color-black);
-  opacity: 0.3;
-}
-.testimonail_area .testimonial_thumb img {
-  height: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -1487,17 +1431,6 @@ header.primary_header.sticky .header-wrapper {
 .testimonail_area .single_testimonial .client_info {
   margin-top: 165px;
   padding-bottom: 10px;
-  border-bottom: 1px solid var(--mr-color-secondary);
-  position: relative;
-}
-.testimonail_area .single_testimonial .client_info::before {
-  position: absolute;
-  content: "";
-  width: 40px;
-  height: 4px;
-  background: var(--mr-color-red);
-  bottom: 0;
-  right: 0;
 }
 .testimonail_area .single_testimonial .client_info .client_name {
   color: var(--mr-color-secondary);
@@ -1517,46 +1450,7 @@ header.primary_header.sticky .header-wrapper {
   bottom: 40px;
   left: 0;
 }
-.testimonail_area .testimonail_video {
-  position: relative;
-}
-.testimonail_area .testimonail_video .video_icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--mr-color-primary);
-  border-radius: 50px;
-  color: var(--mr-color-secondary);
-  transition: all 0.5s ease;
-  font-size: 18px;
-  line-height: 1;
-  animation: pulse 2s linear infinite;
-}
-.testimonail_area .testimonial_thumb {
-  position: relative;
-}
-.testimonail_area .testimonial_thumb::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  background: var(--mr-color-black);
-  opacity: 0.3;
-}
-.testimonail_area .testimonial_thumb img {
-  height: 100%;
-}
 
 /*------------------------------------------------------------------
             THANKS FOR HAVING WITH 
-------------------------------------------------------------------*/
-
-/*# sourceMappingURL=main.css.map */
+------------------------------------------------------------------*//*# sourceMappingURL=style.css.map */
