@@ -42,16 +42,22 @@
     color: var(--mr-color-secondary);
     font-family: var(--mr-global-font-family);
     background: var(--mr-color-primary);
-    padding: 8px 24px;
+    padding: 12px 30px;
     border-radius: 0;
     display: inline-block;
+    font-size: 15px;
+    line-height: 1;
+    @include xl-up {
+        font-size: 18px;
+        padding: 15px 28px;
+    }
     &::before {
         content: "";
         position: absolute;
         z-index: -1;
         background: var(--mr-color-secondary);
-        height: 150px;
-        width: 200px;
+        height: 250px;
+        width: 300px;
         border-radius: 50%;
         top: 100%;
         left: 100%;
@@ -60,132 +66,10 @@
     &:hover {
         color: var(--mr-color-white);
         &::before {
-            top: -30px;
+            top: -90px;
             left: -20px;
         }
     }
 }
-
-// primary outline button
-.btn_outline_primary {
-    font-size: 0.875rem;
-    padding: 0.75rem 1.5rem;
-    background: transparent;
-    letter-spacing: 1.8px;
-    display: inline-block;
-    border: 1px solid var(--mr-color-white);
-    transition: all .3s ease;
-    position: relative;
-    span {
-        color: var(--mr-color-white);
-        display: inline-block;
-        transition: all .3s ease;
-        position: relative;
-        z-index: 2;
-    }
-    &::before {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        transform: translate(0, 5px);
-        background: var(--mr-color-primary);
-        transition: all .3s ease;
-        color: var(--mr-color-white);
-        bottom: 0;
-        left: 0;
-        right: 0;
-        opacity: 0;
-        visibility: hidden;
-
-    }
-    &:hover {
-        span {
-            color: var(--mr-color-white);
-        }
-        &::before {
-            transform: translate(0) scale(1);
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-}
-
-// secondary outline button
-.secondary_outline_btn {
-    position: relative;
-    font-size: 0.875rem;
-    @include flex-center;
-    border: 2px solid var(--mr-color-slate-200);
-    text-align: center;
-    color: var(--mr-color-slate-200);
-    z-index: 1;
-    padding: 0.5rem 1rem;
-    display: inline-block;
-    transition: all .3s ease;
-    @include sm-up {
-        font-size: 1rem;
-        padding: 0.5rem 1.5rem;
-    }
-    &::before {
-        content: '';
-        position: absolute;
-        background-color: var(--mr-color-slate-200);
-        top: -2px;
-        left: -8px;
-        width: 8px;
-        height: 2px;
-        transition: all .3s ease;
-    }
-    &::after {
-        content: '';
-        position: absolute;
-        background-color: var(--mr-color-slate-200);
-        top: -8px;
-        left: -2px;
-        width: 2px;
-        height: 8px;
-        transition: all .3s ease;
-    }
-    &:hover {
-        color: var(--mr-color-primary);
-        border-color: var(--mr-color-primary);
-        &::before {
-            background-color: var(--mr-color-primary);
-        }
-        &::after {
-            background-color: var(--mr-color-primary);
-        }
-    }
-}
-
-
-// classic button 
-.classic_btn {
-    color: var(--mr-color-secondary);
-    position: relative;
-    display: inline-block;
-    transition: all .3s ease;
-    font-size: 0.875rem;
-    @include xl-up {
-        font-size: 1rem;
-    }
-    &::before {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 2px;
-        background: var(--mr-color-primary);
-        top: 50%;
-        transition: all 0.3s ease;
-        transform: translateY(-50%) rotate(-15deg) scale(0);
-    }
-    &:hover {
-        &::before {
-            transform: translateY(-50%) rotate(-15deg) scale(1);
-        }
-    }
-}
-
 
   

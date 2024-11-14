@@ -2,9 +2,17 @@
 # Footer-block
 --------------------------------------------------------------*/
 .footer_area {
-    padding: 120px 0;
+    padding: 32px 0;
     position: relative;
-    background: cover / center no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include xl-up {
+        padding: 90px 0;
+    }
+    @include xxl-up {
+        padding: 120px 0;
+    }
     &::before {
         position: absolute;
         content: '';
@@ -17,14 +25,33 @@
     .footer_wrapper {
         position: relative;
         z-index: 5;
-        margin-bottom: 120px;
+        margin-bottom: 60px;
+        @include xl-up {
+            margin-bottom: 120px;
+        }
     }
     .footer_title{
-        font-size: 62px;
-        font-weight: 700;
+        font-size: 40px;
+        font-weight: 500;
         color: var(--mr-color-white);
         line-height: 1.1;
-        margin-bottom: 50px;
+        margin: 0 auto;
+        max-width: 300px;
+        @include xl-up {
+            font-size: 62px;
+            margin-bottom: 50px;
+            max-width: 100%;
+        }
+    }
+
+    .footer_widget  {
+        margin-top: 48px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        @include xl-up {
+            margin-top: 0;
+        }
     }
     // footer widget
     .single_widget {
@@ -34,7 +61,7 @@
         .title {
             font-size: 24px;
             color: var(--mr-color-white);
-            font-weight: 700;
+            font-weight: 500;
             margin-bottom: 10px;
             letter-spacing: 1.4px;
         }
@@ -42,7 +69,10 @@
             display: block;
             color: var(--mr-color-white);
             line-height: 1.5;
-            max-width: 235px;
+            display: block;
+            @include xl-up {
+                max-width: 235px;
+            }
         }
     }
 
@@ -51,16 +81,24 @@
         position: relative;
         z-index: 5;
         .social_icons {
-            gap: 24px;
-            margin-bottom: 25px;
+            gap: 16px;
+            margin-bottom: 16px;
+            @include xl-up {
+                gap: 24px;
+                margin-bottom: 25px;
+            }
             a {
                 border: 1px solid var(--mr-color-white);
-                padding: 14px;
+                padding: 10px;
                 border-radius: 100px;
                 display: inline-block;
                 line-height: 1;
-                font-size: 20px;
+                font-size: 14px;
                 transition: all .3s ease;
+                @include xl-up {
+                    font-size: 20px;
+                    padding: 14px;
+                }
                 &.primary_solid_btn {
                     background: transparent;
                     color: var(--mr-color-white);
@@ -74,14 +112,20 @@
             }
         }
         .copyright_content {
-            font-family: var(--mr-montserrat-font);
-            font-size: 21px;
+            font-family: var(--mr-global-font-family);
+            font-size: 16px;
             letter-spacing: 0.6px;
-            .copyright_by {
-                font-family: var(--mr-montserrat-font);
+            @include xl-up {
                 font-size: 21px;
+            }
+            .copyright_by {
+                font-family: var(--mr-global-font-family);
+                font-size: 16px;
                 letter-spacing: 0.6px;
                 color: var(--mr-color-primary);
+                @include xl-up {
+                    font-size: 21px;
+                }
             }
         }
     }

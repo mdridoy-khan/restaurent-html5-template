@@ -77,63 +77,6 @@
     });
 
     /* ============================================================ */
-    /* Gallery Lightbox
-    /* ============================================================ */
-    const lightbox = GLightbox({
-        touchNavigation: true,
-        loop: true,
-        autoplayVideos: true
-    });
-    
-    /* ============================================================ */
-    /* Mobile Menu Integration
-    /* ============================================================ */
-
-    /* ============================================================ */
-    /* ISOTOP
-    /* ============================================================ */
-    $(window).on("load resize",function(e){ 
-        var $container = $('.isotop-gallery'),
-        isotope = function () {
-            $container.isotope({
-                resizable: true,
-                itemSelector: '.grid-item',
-                layoutMode: 'packery',
-                percentPosition: true,
-                masonry: {
-                    columnWidth: '.grid-item',
-                },
-                hiddenStyle: {
-                    transform: 'scale(.2) skew(30deg)',
-                    opacity: 0
-                },
-                visibleStyle: {
-                    transform: 'scale(1) skew(0deg)',
-                    opacity: 1,
-                },
-                transitionDuration: '.5s',
-            });
-        };
-        isotope(); 
-
-        var $isotopefilters = $('.filter-buttons');
-        $isotopefilters.on( 'click', 'button', function() {
-            $(this).addClass('active').siblings().removeClass('active');
-
-            var filterValue = $( this ).attr('data-filter');
-            $container.isotope({ 
-                filter: filterValue 
-            });
-        });        
-    }); 
-
-    // Fun Facts Counterup
-    $('.counter').counterUp({
-        delay: 10,
-        time: 2000
-    });
-
-    /* ============================================================ */
     /* Scroll Top
     /* ============================================================ */
     $('body').append(
@@ -189,88 +132,34 @@
 
     // brand slider activation
     let testimonialSlider = new Swiper ('.testimonial_slider', {
-        spaceBetween: 25,
-        speed: 2000,
+        spaceBetween: 0,
+        speed: 5000,
         autoplay: true,
-        breakpoints: {
-            576: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            992: {
-                slidesPerView: 2,
-            },
-            1200: {
-                slidesPerView: 3,
-            },
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true
+        slidesPerView: 1,
+        navigation: {
+            nextEl: ".testimonial_slider .swiper-button-next",
+            prevEl: ".testimonial_slider .swiper-button-prev",
         },
     });
 
-
-    // brand slider activation
-    let brandSlider = new Swiper ('.brand_slider', {
-        spaceBetween: 30,
-        slidesPerView: 'auto',
-        loop: true,
-        freeMode: true,
-        slidesPerView: 2,
-        speed: 5000,
-        autoplay: {
-            delay: 0,
-        },
-        breakpoints: {
-            576: {
-                slidesPerView: 3,
-            },
-            1200: {
-                slidesPerView: 5,
-            },
-        },
-    });
-    
-    // brand slider activation
-    let footerBrandSlider = new Swiper ('.footer_brand_slider', {
-        spaceBetween: 30,
-        slidesPerView: 'auto',
-        loop: true,
-        freeMode: true,
-        slidesPerView: 2,
-        speed: 5000,
-        autoplay: {
-            delay: 0,
-        },
-        breakpoints: {
-            576: {
-                slidesPerView: 3,
-            },
-            1200: {
-                slidesPerView: 4,
-            },
-        },
-    });
-
-    // service slider activation
-    let serviceSlider = new Swiper ('.services_slider', {
-        spaceBetween: 30,
-        slidesPerView: 'auto',
-        loop: true,
-        slidesPerView: 2,
+    // product slider activation
+    let serviceSlider = new Swiper ('.product_slider', {
+        spaceBetween: 32,
+        slidesPerView: 1,
         speed: 5000,
         autoplay: {
             delay: 2000,
         },
+        navigation: {
+            nextEl: ".product_slider .swiper-button-next",
+            prevEl: ".product_slider .swiper-button-prev",
+        },
         breakpoints: {
             576: {
-                slidesPerView: 3,
+                slidesPerView: 2,
             },
             1200: {
-                slidesPerView: 3,
+                slidesPerView: 4,
             },
         },
     });
@@ -295,84 +184,9 @@
     };
 
 
-    /* ============================================================ */
-    /* project Isotop filter
-    /* ============================================================ */
-    $(window).on("load resize",function(e){ 
-        var $container = $('.project_wrapper'),
-        isotope = function () {
-            $container.isotope({
-                resizable: true,
-                itemSelector: '.grid-item',
-                layoutMode: 'packery',
-                percentPosition: true,
-                masonry: {
-                    columnWidth: '.grid-item',
-                },
-                hiddenStyle: {
-                    transform: 'scale(.2) skew(30deg)',
-                    opacity: 0
-                },
-                visibleStyle: {
-                    transform: 'scale(1) skew(0deg)',
-                    opacity: 1,
-                },
-                transitionDuration: '.5s',
-            });
-        };
-        isotope(); 
-
-        var $isotopefilters = $('.project_menu_list');
-        $isotopefilters.on( 'click', 'button', function() {
-            $(this).addClass('active').siblings().removeClass('active');
-
-            var filterValue = $( this ).attr('data-filter');
-            $container.isotope({ 
-                filter: filterValue 
-            });
-        });
-    }); 
-    
-
-    // testimonail slider js
-    var clientImage = new Swiper(".client_image_slider", {
-        loop: true,
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        autoplay: true,
-        watchSlidesProgress: true,
+    $("#dateTime").flatpickr({
+        dateFormat: "Y-m-d",
     });
-    var clientInfo = new Swiper(".client_info_slider", {
-        loop: true,
-        spaceBetween: 10,
-        autoplay: true,
-        parallax: true,
-        watchSlidesProgress: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-            swiper: clientImage
-        },
-    });
-      
-
-
-    /* ============================================================ */
-    /* Searchbox Show-Hide
-    /* ============================================================ */
-    function toggleModal(modalClass, openTrigger, closeTrigger, activeClass) {
-        $(document).on('click', openTrigger, function() {
-            $(modalClass).addClass(activeClass);
-        });    
-        $(document).on('click', closeTrigger, function() {
-            $(modalClass).removeClass(activeClass);
-        });
-    }
-    toggleModal('.searchbox', '.search_icon', '.closeSearchBox', 'show');
-    
 
     /* ============================================================ */
     /* AOS Animation 
@@ -381,6 +195,10 @@
         duration: 800,
         once: true,
     });
+
+    $('.video_icon').magnificPopup({
+		type: 'iframe'
+	});
 
     /* ============================================================ */
     /* Nice Select 

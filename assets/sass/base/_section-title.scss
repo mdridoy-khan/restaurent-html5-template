@@ -1,9 +1,11 @@
 // section title style here
 .section_title {
-    margin-bottom: 60px;
-
+    margin-bottom: 40px;
+    @include xl-up {
+        margin-bottom: 60px;
+    }
     .sub_title {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.6;
         font-weight: 700;
         color: var(--mr-color-red);
@@ -11,7 +13,9 @@
         position: relative;
         display: block;
         margin-bottom: 16px;
-
+        @include xl-up {
+            font-size: 20px;
+        }
         &::before {
             position: absolute;
             content: "";
@@ -25,8 +29,18 @@
     }
 
     .title {
-        font-size: 62px;
-        font-weight: 700;
+        font-size: 40px;
+        font-weight: 500;
         line-height: 1;
+        margin-bottom: 16px;
+        @include xl-up {
+            font-size: 62px;
+        }
+    }
+    .text {
+        color: var(--mr-color-white-200);
+        @include xl-up {
+            max-width: 545px;
+        }
     }
 }
