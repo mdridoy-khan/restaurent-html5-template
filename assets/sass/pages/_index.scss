@@ -419,13 +419,14 @@
             background: var(--mr-color-white);
             border-radius: 50px;
             filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
-            @include xl-up {
+            @include lg-up {
                 top: 40px;
                 right: 5px;
                 width: 60px;
                 height: 60px;
                 left: auto;
                 bottom: auto;
+                margin: 0;
             }
             &::after {
                 font-size: 14px;
@@ -445,7 +446,7 @@
         }
         .swiper-button-prev {
             left: -110px;
-            @include md-up {
+            @include lg-up {
                 left: auto;
                 right: 92px;
             }
@@ -519,12 +520,13 @@
     }
     .testimonial_slider {
         padding-bottom: 4rem;
-        @include xl-up {
+        @include lg-up {
             padding-top: 10rem;
             margin-top: -10rem;
             padding-bottom: 0;
         }
-        .swiper-button-next, .swiper-button-prev {
+        .swiper-button-next,
+        .swiper-button-prev {
             position: absolute;
             bottom: 5px;
             right: -60px;
@@ -536,33 +538,41 @@
             background: var(--mr-color-white);
             border-radius: 50px;
             filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
-            @include xl-up {
+
+            @include lg-up {
                 top: 40px;
                 right: 5px;
                 width: 60px;
                 height: 60px;
                 left: auto;
                 bottom: auto;
+                margin: 0;
             }
+
             &::after {
                 font-size: 14px;
                 color: var(--mr-color-secondary);
+
                 @include lg-up {
                     font-size: 18px;
                 }
             }
+
             &.swiper-button-disabled {
                 opacity: 1;
             }
+
             &:hover {
                 &::after {
                     color: var(--mr-color-red);
                 }
             }
         }
+
         .swiper-button-prev {
             left: -110px;
-            @include md-up {
+
+            @include lg-up {
                 left: auto;
                 right: 92px;
             }

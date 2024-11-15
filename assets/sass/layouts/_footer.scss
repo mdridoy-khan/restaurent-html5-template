@@ -49,6 +49,9 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 24px;
+        @include lg-up {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
         @include xl-up {
             margin-top: 0;
         }
